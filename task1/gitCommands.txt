@@ -6,8 +6,13 @@ Initialized empty Git repository in D:/presidio_tasks/version-control-using-git/
 
 git add [filename] //add particular file to our next commit 
 
-
 git commit -m "Git task 1 has been done" //to save the changes done locally, like a checkpoint 
+
+Output:
+PS D:\presidio_tasks\version-control-using-git> git commit -m "Git task 1 has been done"
+[master (root-commit) 6588bd6] Git task 1 has been done
+ 1 file changed, 16 insertions(+)
+ create mode 100644 gitCommands.txt
 
 git branch -M main //setting current branch as main
 
