@@ -36,5 +36,15 @@ git checkout -b test //creating a new branch and switching to it
 
 git checkout main //then swtich to main branch
 
+Output:
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
 git merge test //merge new branch with main branch and resolve if any conflicts found 
+
+Output:
+Updating 0a41eb9..8a39d8b
+Fast-forward
+ task1/gitCommands.txt | 25 ++++++++++++++++++++++---
+ 1 file changed, 22 insertions(+), 3 deletions(-)
 
