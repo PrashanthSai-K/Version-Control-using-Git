@@ -1,0 +1,40 @@
+TO SIMULATE A FORCE PUSH SCENARIO CREATED MULTIPLE BRANCHES
+
+git checkout -b feature1
+
+git checkout main
+
+git checkout -b feature2
+
+DONE MULTIPLE CHANGES IN FEATURES BRANCHE AND COMMITED FREQUENTLY
+
+TO REBASE THE COMMIT 
+
+git rebase -i HEAD~3
+
+Output:
+
+[detached HEAD f81e48f] git task 10 undergoing / feature2
+ Date: Wed Mar 19 15:08:28 2025 +0530
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+REMOTELY CHANGED SOME FILES AND TRIE TO PUSH FROM LOCAL WIHTOUt PULL
+
+git push origin feature2 --force
+
+Output:
+
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (8/8), 884 bytes | 884.00 KiB/s, done.
+Total 8 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+remote:
+remote: Create a pull request for 'feature2' on GitHub by visiting:
+remote:      https://github.com/PrashanthSai-K/Version-Control-using-Git/pull/new/feature2
+remote:
+To https://github.com/PrashanthSai-K/Version-Control-using-Git.git
+ * [new branch]      feature2 -> feature2
+

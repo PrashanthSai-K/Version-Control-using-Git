@@ -1,8 +1,8 @@
 const obj = {
     id : 2,
-    name: "user2 ",
+    name: "user2",
     college: {
-        name: "Demo collegee",
+        name: "Demo college",
         state: "KL"
     }
 };
