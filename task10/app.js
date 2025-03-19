@@ -1,11 +1,11 @@
 const obj = {
-    id : 1,
-    name: "user",
+    id : 2,
+    name: "user2 ",
     college: {
-        name: "sample college",
-        state: "TN"
+        name: "Demo collegee",
+        state: "KL"
     }
-}
+};
 
 console.log("Name: ", obj.name);
-console.log("College: ", obj.college.name)
+console.log("College: ", obj.college.name);
