@@ -1,1 +1,1 @@
-Creating a merge conflict scenarioo.
+Creating a mergee conflict scenarioo.
