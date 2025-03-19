@@ -1,5 +1,5 @@
-cont data = 10
+const data = 10;
 
 if(data){
-    consloe.lgo(data);
+    console.log(data);
 }

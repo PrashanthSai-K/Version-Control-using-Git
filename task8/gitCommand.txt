@@ -1,0 +1,37 @@
+ADDED A pre-commit FILE TO ./git/hooks 
+
+IN THE FILE WRITTEN SCRIPT TO CHECK LINTS FOR ALL THE JAVASCRIPT FILE IN THE REPO BEFORE COMMITING
+
+git commit -m "Sample commit"
+
+Output:
+
+Linting files......
+
+D:\presidio_tasks\version-control-using-git\task8\sample.js
+  1:16  error    Missing semicolon             semi
+  4:5   warning  Unexpected console statement  no-console
+
+✖ 2 problems (1 error, 1 warning)
+  1 error and 0 warnings potentially fixable with the `--fix` option.
+
+❌ Linting failed. Please fix the issues before committing.
+
+AFTER CORRECTING THE ERROR 
+
+git commit -m "git task 8 undergoing"
+
+Output:
+
+Linting files......
+
+D:\tasks\version-control-using-git\task8\sample.js
+  4:5  warning  Unexpected console statement  no-console
+
+✖ 1 problem (0 errors, 1 warning)
+
+✅ Linting passed!
+[main 4ac5e9c] git task 8 undergoing
+ 2 files changed, 10 insertions(+)
+ create mode 100644 eslint.config.mjs
+ rename task8/{sample.js => sample.mjs} (100%)
