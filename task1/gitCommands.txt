@@ -1,7 +1,6 @@
 git init //to initialize local repository
 
 Output:
-PS D:\presidio_tasks\version-control-using-git> git init
 Initialized empty Git repository in D:/presidio_tasks/version-control-using-git/.git/
 
 git add [filename] //add particular file to our next commit 
@@ -9,7 +8,6 @@ git add [filename] //add particular file to our next commit
 git commit -m "Git task 1 has been done" //to save the changes done locally, like a checkpoint 
 
 Output:
-PS D:\presidio_tasks\version-control-using-git> git commit -m "Git task 1 has been done"
 [master (root-commit) 6588bd6] Git task 1 has been done
  1 file changed, 16 insertions(+)
  create mode 100644 gitCommands.txt
@@ -19,3 +17,19 @@ git branch -M main //setting current branch as main
 git remote add origin https://github.com/PrashanthSai-K/Version-Control-using-Git.git //adding remote origin to push the files
 
 git push -u origin main //to push the files from local repo to the remote server
+
+Output:
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (7/7), 950 bytes | 950.00 KiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/PrashanthSai-K/Version-Control-using-Git.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+git checkout -b test //creating a new branch and switching to it
+
+//done some changes and committed to new branch
