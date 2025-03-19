@@ -1,0 +1,45 @@
+CREATED A BANCH
+
+git checkout -b branch1
+
+git checkout main
+
+MULTIPLE COMMITS DONE IN MAIN BRANCH, TO IMPLEMENT A SPECIFIC COMMIT IN MAIN BRANCH TO NEW BRANCH
+
+git log --oneline
+
+Output:
+
+b81f138 (HEAD -> main) git task 7 started //main branch
+dedf876 (origin/main) git task 6 completed
+84fadf3 git task 6 undergoing
+c185172 git task 5 completed
+993028d git task 5 modified
+a2f08b3 git task 5 started
+84c86b2 git task 4 done
+a264cd3 (branch1) git task 4 undergoing  //new branch
+
+SWITCH TO NEW BRANCH 
+
+git checkout branch1
+
+CHERRY-PICK REQUIRED COMMIT
+
+git cherry-pick c185172
+
+Output:
+
+[branch1 6286c56] git task 5 completed
+ Date: Wed Mar 19 12:11:51 2025 +0530
+ 1 file changed, 36 insertions(+)
+ create mode 100644 task5/gitCommands.txt
+
+CHECK COMMIT HISTORY
+
+git log --oneline
+
+Output:
+
+6286c56 (HEAD -> branch1) git task 5 completed
+a264cd3 git task 4 undergoing
+bffbd58 git task 4 undergoing
