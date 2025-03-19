@@ -1,0 +1,16 @@
+git init //to initialize local repository
+
+Output:
+PS D:\presidio_tasks\version-control-using-git> git init
+Initialized empty Git repository in D:/presidio_tasks/version-control-using-git/.git/
+
+git add [filename] //add particular file to our next commit 
+
+
+git commit -m "Git task 1 has been done" //to save the changes done locally, like a checkpoint 
+
+git branch -M main //setting current branch as main
+
+git remote add origin https://github.com/PrashanthSai-K/Version-Control-using-Git.git //adding remote origin to push the files
+
+git push -u origin main //to push the files from local repo to the remote server
