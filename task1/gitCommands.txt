@@ -33,3 +33,8 @@ branch 'main' set up to track 'origin/main'.
 git checkout -b test //creating a new branch and switching to it
 
 //done some changes and committed to new branch
+
+git checkout main //then swtich to main branch
+
+git merge test //merge new branch with main branch and resolve if any conflicts found 
+
