@@ -1,0 +1,15 @@
+created .gitignore file to avoid tracking certain files
+
+verified with git status command and .env file is not tracked
+
+
+git status 
+
+Output: 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   task2/.gitignore
+        new file:   task2/gitCommands.txt
