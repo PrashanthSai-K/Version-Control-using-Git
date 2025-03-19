@@ -1,0 +1,36 @@
+CREATED MESSY commits
+
+git commit -m "git task 5 modified"
+
+git commit -m "git task 5 modified.."
+
+THEN REBASED INTERACTIVELY
+
+git rebase -i HEAD~2 //last 2 commits will be rebased
+
+Output:
+
+[detached HEAD 993028d] git task 5 modified
+ Date: Wed Mar 19 12:05:15 2025 +0530
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully rebased and updated refs/heads/main.
+
+TO CHECK REBASE 
+
+git log 
+
+Output:
+
+commit 993028d15420f86876e466cae520b9c241c9ca94 (HEAD -> main)
+Author: PrashanthSai-K <srisathyasai24680@gmail.com>
+Date:   Wed Mar 19 12:05:15 2025 +0530
+
+    git task 5 modified
+
+    git task 5 modified.
+
+    git task 5 undergoing
+
+
+
+
