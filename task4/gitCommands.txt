@@ -1,1 +1,34 @@
-creating two branches from same commit
+CREATING TWO BRANCHES FROM SAME COMMIT
+
+git checkout -b branch1
+
+git checkout main
+
+git checkout -b branch2
+
+DONE CHANGES IN SAME IN TWO BRANCHES AND WHEN TRIED TO MERGE IT RESULTES IN conflict
+
+git checkout branch1 
+
+git merge branch2
+
+TO CHECK DIFF 
+
+git DIFF
+
+Output:
+
+diff --cc task4/samplefile.txt
+index 7e3e0d1,55adfe7..0000000
+--- a/task4/samplefile.txt
++++ b/task4/samplefile.txt
+@@@ -1,1 -1,1 +1,5 @@@
+- Creating a mergee conflict scenarioo.
+ -Creating a merge conflict scenarioo..
+++<<<<<<< HEAD
+++Creating a mergee conflict scenarioo.
+++=======
+++Creating a merge conflict scenarioo..
+++>>>>>>> branch2
+
+MANUALLY RESOLVED AND COMMITED TO RESOLVE CONFLICTS
