@@ -18,23 +18,63 @@ Output:
  Date: Wed Mar 19 15:08:28 2025 +0530
  1 file changed, 6 insertions(+), 6 deletions(-)
 
-REMOTELY CHANGED SOME FILES AND TRIE TO PUSH FROM LOCAL WIHTOUt PULL
+REMOTELY CHANGED SOME FILES AND TRIED TO PUSH FROM LOCAL WIHTOUT PULL
+
+git push origin feature2
+
+Output:
+
+ ! [rejected]        feature2 -> feature2 (fetch first)
+error: failed to push some refs to 'https://github.com/PrashanthSai-K/Version-Control-using-Git.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+TO PUSH THE CHANGES FORCEFULLY
 
 git push origin feature2 --force
 
 Output:
 
-Enumerating objects: 9, done.
-Counting objects: 100% (9/9), done.
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (6/6), done.
-Writing objects: 100% (8/8), 884 bytes | 884.00 KiB/s, done.
-Total 8 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (2/2), completed with 1 local object.
-remote:
-remote: Create a pull request for 'feature2' on GitHub by visiting:
-remote:      https://github.com/PrashanthSai-K/Version-Control-using-Git/pull/new/feature2
-remote:
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (13/13), 1.79 KiB | 915.00 KiB/s, done.
+Total 13 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (5/5), completed with 1 local object.
 To https://github.com/PrashanthSai-K/Version-Control-using-Git.git
- * [new branch]      feature2 -> feature2
+ + 6ad5069...3ea6a24 feature2 -> feature2 (forced update)
 
+
+GIT FORCE SHOULD BE USED CAUTIOUSLY because
+
+    * OVERWRITES HISTORY ON REMOTE BRANCHES
+    * CAN DELETE TEAMMATES WORK AFTER YOUR LAST PULL IF SOMEBODY PUSHED TO REMOTE REPO
+
+GIT REFLOG SHOWS ALL HEAD MOVEMENTS 
+
+git reflog 
+
+Output:
+
+3ea6a24 (HEAD -> feature2, origin/feature2) HEAD@{0}: commit: git task 10 undergoing / simulating force push
+f81e48f HEAD@{1}: rebase (finish): returning to refs/heads/feature2
+f81e48f HEAD@{2}: rebase (start): checkout HEAD~3
+f81e48f HEAD@{3}: rebase (finish): returning to refs/heads/feature2
+f81e48f HEAD@{4}: rebase (squash): git task 10 undergoing / feature2
+f15a6ee HEAD@{5}: rebase (squash): # This is a combination of 2 commits.
+b4623f3 HEAD@{6}: rebase (start): checkout HEAD~3
+dd80c4f HEAD@{7}: commit: git task 10 undergoing / feature2
+0a129ba HEAD@{8}: commit: git task 10 undergoing / feature2.
+b4623f3 HEAD@{9}: commit: git task 10 undergoing / feature2
+968d164 (feature1) HEAD@{10}: checkout: moving from feature1 to feature2
+968d164 (feature1) HEAD@{11}: commit: git task 10 undergoing / feature1
+266f2fd (origin/main, main) HEAD@{12}: checkout: moving from main to feature1
+266f2fd (origin/main, main) HEAD@{13}: commit: git task 9 completed
+a2a2b9f HEAD@{14}: checkout: moving from new_feature to main
+
+IF ACCIDENTALLY LOST A COMMIT DURING REBASE git reflog WILL HAVE THE COMMIT ID AS IT STORES ALL THE HEAD MOVEMENTS.
+WE CAN USE THIS COMMIT ID TO CHERRY-PICK AND ADD THE LOST COMMIT ON TOP OF OUR CURRENT COMMIT
