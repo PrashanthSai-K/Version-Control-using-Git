@@ -1,0 +1,24 @@
+CREATED A SAMPLE FILE DONE SOME CHANGES AND STASHED THEM
+
+git stash //store the changes temproarily in a stack and go back to last commit
+
+VISITED TO ANOTHE BRANCH DONE SOME CHANGES AND CAME BACK
+
+git checkout branch1
+
+git checkout main
+
+GET THE STASH LIST
+
+git stash list 
+
+Output:
+stash@{0}: WIP on main: c185172 git task 5 completed
+
+TO BRING THE CHANGES BACK 
+
+git stash pop //pop from stack and apply the changes
+
+git stash apply //only apply the changes, stash will be available in stack
+
+git stash drop

@@ -1,0 +1,1 @@
+sample file to work with git stash.
