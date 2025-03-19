@@ -1,0 +1,31 @@
+CREATED NEW FILE, COMMITED AND DONE SOME CHANGES 
+
+TO RESTORE CHANGES USED THIS COMMAND
+
+git checkout -- ./task3/samplefile.txt 
+
+TO REVERT CHANGES BACK TO ANY OLD COMMIT BY CREATING A NEW COMMIT
+
+git revert b9477d9f7dc95ff3dc60642a62ab74c6c7796ce0 //commit hash
+
+Output: 
+
+[main a4f5b7c] Revert "git task 3 undergoing"
+ 1 file changed, 10 deletions(-)
+
+TO REVERT CHANGES BACK TO ANY COMMIT BY GOING BACK TO COMMIT STAGE(UNSTAGED) (LIKE GOING BACK IN TIME)
+
+git reset a4f5b7c10114dd6c56aa0cd35d89e1b9e5b221e5
+
+Output: 
+
+Unstaged changes after reset:
+M       task3/gitCommands.txt
+
+TO REVERT CHANGES BACK TO ANY COMMIT BY GOING BACK TO COMMIT(WIPE CHANGES) (LIKE GOING BACK IN TIME)
+
+git reset --hard a4f5b7c10114dd6c56aa0cd35d89e1b9e5b221e5 
+
+Output:
+
+HEAD is now at a4f5b7c Revert "git task 3 undergoing"
