@@ -19,6 +19,21 @@ TO BRING THE CHANGES BACK
 
 git stash pop //pop from stack and apply the changes
 
+Output:
+
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   task6/gitCommands.txt
+        new file:   task6/samplefile.txt
+
+
 git stash apply //only apply the changes, stash will be available in stack
 
-git stash drop
+git stash drop "stash@{0}" //drop stash from the stack
+
+Output:
+
+Dropped stash@{0} (89e7dc4381116b4d9a33c514e3345a7657ea4d57)
